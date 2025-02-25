@@ -1,0 +1,68 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API документация",
+        "description": "Пример описания API с использованием Swagger",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api",
+            "description": "Local API Server"
+        }
+    ],
+    "paths": {
+        "/api/hello": {
+            "get": {
+                "tags": [
+                    "Тест"
+                ],
+                "summary": "Приветствие",
+                "description": "Получить приветственное сообщение",
+                "operationId": "f230ef44bd279c189ebf575b2d5cd472",
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Привет, мир!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/example": {
+            "get": {
+                "tags": [
+                    "Example"
+                ],
+                "summary": "Пример запроса",
+                "operationId": "d39d69e6c6bb81f4ad04a54f35e0ba54",
+                "responses": {
+                    "200": {
+                        "description": "Успешный ответ"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Тест",
+            "description": "Тест"
+        },
+        {
+            "name": "Example",
+            "description": "Example"
+        }
+    ]
+}
